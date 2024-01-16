@@ -10,6 +10,8 @@ var timer = undefined;
 var timeLeft = 0;
 var penalty = false;
 
+var questionNumber = undefined;
+
 startButton.addEventListener("click", function () {
     startGame();
 });
@@ -21,6 +23,8 @@ function startGame() {
     shuffle(questions);
 
     startTimer();
+
+    questionNumber = 0;
 }
 
 function hideSection(section) {
@@ -57,19 +61,19 @@ function endGame() {
 }
 
 function shuffle(array) {
-    let currentIndex = array.length,  randomIndex;
-  
+    let currentIndex = array.length, randomIndex;
+
     // While there remain elements to shuffle.
     while (currentIndex > 0) {
-  
-      // Pick a remaining element.
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex--;
-  
-      // And swap it with the current element.
-      [array[currentIndex], array[randomIndex]] = [
-        array[randomIndex], array[currentIndex]];
+
+        // Pick a remaining element.
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+
+        // And swap it with the current element.
+        [array[currentIndex], array[randomIndex]] = [
+            array[randomIndex], array[currentIndex]];
     }
-  
+
     return array;
-  }
+}
