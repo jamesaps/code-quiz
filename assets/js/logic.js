@@ -110,3 +110,25 @@ function askQuestion() {
         questionChoices.appendChild(button);
     }
 }
+
+function answerQuestion(answer) {
+    var correctAnswer = questions[questionNumber].answer;
+
+    if (answer === correctAnswer) {
+
+    } else {
+
+    }
+
+    nextQuestion();
+}
+
+function nextQuestion() {
+    if (++questionNumber === questions.length) {
+        // All questions have been exhausted
+        endGame();
+        return;
+    }
+
+    askQuestion();
+}
