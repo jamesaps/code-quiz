@@ -157,7 +157,7 @@ function answerQuestion(answer) {
         giveFeedback("Correct");
     } else {
         ++penalty;
-        giveFeedback(`Wrong! Correct answer was ${answer}.`);
+        giveFeedback(`Wrong! Correct answer was ${correctAnswer}.`);
     }
 
     nextQuestion();
