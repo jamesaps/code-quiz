@@ -56,7 +56,7 @@ function showSection(section) {
 function startTimer() {
     timeLeft = 10;
 
-    timerTextSection.textContent = timeLeft;
+    renderTimer();
 
     timer = setInterval(function () {
         if (penalty > 0) {
@@ -70,12 +70,15 @@ function startTimer() {
             endGame();
         }
 
-        timerTextSection.textContent = timeLeft;
+        renderTimer()
     }, 1000);
 }
 
 function endGame() {
     clearInterval(timer);
+    timeLeft = 0;
+
+    renderTimer();
 }
 
 function shuffle(array) {
@@ -131,4 +134,8 @@ function nextQuestion() {
     }
 
     askQuestion();
+}
+
+function renderTimer() {
+    timerTextSection.textContent = timeLeft;
 }
