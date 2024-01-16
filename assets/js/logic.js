@@ -11,12 +11,22 @@ var questionChoices = document.getElementById("choices");
 
 var timer = undefined;
 var timeLeft = 0;
-var penalty = false;
+var penalty = 0;
 
 var questionNumber = undefined;
 
 startButton.addEventListener("click", function () {
     startGame();
+});
+
+questionChoices.addEventListener("click", function (event) {
+    var element = event.target;
+
+    if (element.matches("button")) {
+        var answer = element.getAttribute("data-answer");
+
+        answerQuestion(answer);
+    }
 });
 
 function startGame() {
@@ -46,9 +56,9 @@ function startTimer() {
     timerTextSection.textContent = timeLeft;
 
     timer = setInterval(function () {
-        if (penalty) {
-            timeLeft = timeLeft - 10;
-            penalty = false;
+        if (penalty > 0) {
+            timeLeft = timeLeft - (10 * penalty);
+            penalty = 0;
         }
 
         timeLeft = Math.max(timeLeft - 1, 0);
@@ -98,3 +108,6 @@ function askQuestion() {
     }
 }
 
+function answerQuestion(answer) {
+
+}
