@@ -46,6 +46,10 @@ submitButton.addEventListener("click", function (event) {
         alert("Initials must be between 1-3 characters long.");
         return;
     }
+
+    saveHighScore(score, initials);
+
+    giveFeedback("High Score Saved");
 })
 
 function startGame() {
@@ -177,3 +181,41 @@ function giveFeedback(message) {
     }, 1000);
 }
 
+function saveHighScore(score, initials) {
+    var highScores = getHighScores();
+
+    highScores.push({
+        initials: initials,
+        score: score
+    });
+
+    highScores.sort(function (x, y) {
+        if (x.score > y.score) {
+            return -1;
+        } else if (x.score === y.score) {
+            if (x.initials < y.initials) {
+                return -1;
+            } else if (x.initials === y.initials) {
+                return 0;
+            } else {
+                return 1;
+            }
+        } else {
+            return 1;
+        }
+    });
+
+    localStorage.setItem("high-scores", JSON.stringify(highScores));
+}
+
+function getHighScores() {
+    var highScores = JSON.parse(localStorage.getItem("high-scores"));
+
+    if (highScores === null) {
+        return [];
+    }
+
+    console.log(highScores);
+
+    return highScores;
+}
