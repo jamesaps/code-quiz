@@ -1,7 +1,7 @@
 # Coding Quiz
 
 ## Description
-This is project is coding quiz challenge website. Users are shown a series of questions presented in a random order and are against the clock as they try to answer as many questions as possible. Incorrect answers are penalised heavily and users will lose 10 seconds of their available time for every incorrect answer! At the end of each game, users can  choose to have their scores stored as a high score. High scores are persisted to local storage and can be viewed in the dedicated high scores page.  
+This is project is coding quiz challenge although the questions asked are general knowlege questions. Users are shown a series of questions presented in a random order and are against the clock as they try to answer as many questions as possible. Incorrect answers are penalised heavily and users will lose 10 seconds of their available time for every incorrect answer! At the end of each game, users can  choose to have their scores stored as a high score. High scores are persisted to local storage and can be viewed in the dedicated high scores page.  
 
 ![Website Screenshot](./assets/images/project-screenshot.png)
 
