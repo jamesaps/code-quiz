@@ -1,3 +1,5 @@
+// initialise variables to store necessary page elements
+
 var startScreenSection = document.getElementById("start-screen");
 var questionsSection = document.getElementById("questions");
 var endScreenSection = document.getElementById("end-screen");
@@ -13,8 +15,12 @@ var submitButton = document.getElementById("submit");
 var initialsInputText = document.getElementById("initials");
 var finalScoreTextSection = document.getElementById("final-score");
 
+// create audio objects for playing 
+
 var correctAnswerAudio = new Audio('./assets/sfx/correct.wav');
 var incorrectAnswerAudio = new Audio('./assets/sfx/incorrect.wav');
+
+// set up global variables for application state
 
 var timer = undefined;
 var timeLeft = 0;
@@ -27,16 +33,22 @@ var questionNumber = undefined;
 
 var score = 0;
 
+// respond to clicks on start button to begin game, prevent default element behaviour
+
 startButton.addEventListener("click", function (event) {
     event.preventDefault()
 
     startGame();
 });
 
+// respond to clicks on choices container
+
 questionChoices.addEventListener("click", function (event) {
     event.preventDefault();
 
     var element = event.target;
+
+    // perform checks on clicks that occurred on child element (button) of the choices container
 
     if (element.matches("button")) {
         var answer = element.getAttribute("data-answer");
@@ -45,10 +57,14 @@ questionChoices.addEventListener("click", function (event) {
     }
 });
 
+// respond to submit button click
+
 submitButton.addEventListener("click", function (event) {
     event.preventDefault();
 
     var initials = initialsInputText.value;
+
+    // validate user input
 
     if (initials.length === 0 || initials.length > 3) {
         alert("Initials must be between 1-3 characters long.");
@@ -69,6 +85,8 @@ function startGame() {
 
     shuffle(questions);
 
+    // reset quiz state
+
     startTimer();
 
     score = 0;
@@ -86,27 +104,30 @@ function showSection(section) {
 }
 
 function startTimer() {
-    timeLeft = 60;
+    timeLeft = 60; // 60 second timer
 
     renderTimer();
 
     timer = setInterval(function () {
         if (penalty > 0) {
+            // apply all accummulated penalties at once (unlikely this exceeds 1 but if a user clicks very fast it might)
             timeLeft = timeLeft - (10 * penalty);
-            penalty = 0;
+            penalty = 0; // reset penalties applied
         }
 
-        timeLeft = Math.max(timeLeft - 0.1, 0);
+        // ensure timeLeft never goes lower than 0 even if penalties would take them below
+        timeLeft = Math.max(timeLeft - 0.1, 0); // timer refreshes every 100ms so we deduct 1/10th of a second on each tick
 
         if (timeLeft === 0) {
-            endGame();
+            endGame(); // when timeLeft reaches 0 trigger end game actions
         }
 
         renderTimer()
-    }, 100);
+    }, 100); // update timer every 100ms
 }
 
 function endGame() {
+    // reset active timer 
     clearInterval(timer);
     timeLeft = 0;
 
@@ -119,6 +140,7 @@ function endGame() {
     finalScoreTextSection.textContent = score;
 }
 
+// shuffle an array in place
 function shuffle(array) {
     let currentIndex = array.length, randomIndex;
 
@@ -140,8 +162,8 @@ function shuffle(array) {
 function askQuestion() {
     var question = questions[questionNumber];
 
-    questionChoices.innerHTML = "";
-    questionTitle.textContent = question.question;
+    questionChoices.innerHTML = ""; // empty question choices container
+    questionTitle.textContent = question.question; // update question title
 
     for (var i = 0; i < question.options.length; ++i) {
         var button = document.createElement("button");
@@ -149,7 +171,7 @@ function askQuestion() {
         button.textContent = `${i + 1}. ${question.options[i]}`;
         button.setAttribute("data-answer", question.options[i]);
 
-        questionChoices.appendChild(button);
+        questionChoices.appendChild(button); // add button to container
     }
 }
 
@@ -167,8 +189,10 @@ function answerQuestion(answer) {
 
         timerTextSection.style.color = 'red';
 
+        // ensure new timeout overrides and does not coexist alongside previous 
         clearTimeout(incorrectAnswerTimeout);
 
+        // flash timer text red to indicate penalty was applied
         incorrectAnswerTimeout = setTimeout(function () {
             timerTextSection.style.removeProperty('color');
         }, 300);
@@ -195,8 +219,10 @@ function giveFeedback(message) {
     feedbackSection.textContent = message;
     showSection(feedbackSection);
 
+    // if feedback is due to disappear from a previous feedback instance, it is cleared to ensure conflicting timeouts are triggering in seemingly unpredictable ways
     clearTimeout(feedbackTimeout);
 
+    // make feedback disappear after some time
     feedbackTimeout = setTimeout(function () {
         hideSection(feedbackSection);
     }, 1000);
@@ -210,6 +236,7 @@ function saveHighScore(score, initials) {
         score: score
     });
 
+    // sort by highest score first and then initials alphabetically second
     highScores.sort(function (x, y) {
         if (x.score > y.score) {
             return -1;
@@ -230,6 +257,7 @@ function saveHighScore(score, initials) {
 }
 
 function getHighScores() {
+    // if high-scores key does not exist in local storage, null is returned which propagates through JSON.parse
     var highScores = JSON.parse(localStorage.getItem("high-scores"));
 
     if (highScores === null) {
