@@ -13,6 +13,8 @@ var timer = undefined;
 var timeLeft = 0;
 var penalty = 0;
 
+var feedbackTimeout = undefined;
+
 var questionNumber = undefined;
 
 var score = 0;
@@ -118,9 +120,11 @@ function answerQuestion(answer) {
     var correctAnswer = questions[questionNumber].answer;
 
     if (answer === correctAnswer) {
-
+        ++score;
+        giveFeedback(true, null);
     } else {
-
+        ++penalty;
+        giveFeedback(false, `Correct answer was ${answer}.`)
     }
 
     nextQuestion();
@@ -139,3 +143,27 @@ function nextQuestion() {
 function renderTimer() {
     timerTextSection.textContent = timeLeft;
 }
+
+function giveFeedback(correct, notes) {
+    var message = "";
+
+    if (correct) {
+        message = "Correct!"
+    } else {
+        message = "Wrong!"
+    }
+
+    if (notes !== null) {
+        message += " " + notes;
+    }
+
+    feedbackSection.textContent = message;
+    showSection(feedbackSection);
+
+    clearTimeout(feedbackTimeout);
+
+    feedbackTimeout = setTimeout(function () {
+        hideSection(feedbackSection);
+    }, 1000);
+}
+
