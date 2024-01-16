@@ -23,11 +23,15 @@ var questionNumber = undefined;
 
 var score = 0;
 
-startButton.addEventListener("click", function () {
+startButton.addEventListener("click", function (event) {
+    event.preventDefault()
+
     startGame();
 });
 
 questionChoices.addEventListener("click", function (event) {
+    event.preventDefault();
+
     var element = event.target;
 
     if (element.matches("button")) {
