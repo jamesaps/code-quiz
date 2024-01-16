@@ -54,6 +54,9 @@ submitButton.addEventListener("click", function (event) {
     saveHighScore(score, initials);
 
     giveFeedback("High Score Saved");
+
+    hideSection(endScreenSection);
+    showSection(startScreenSection);
 })
 
 function startGame() {
