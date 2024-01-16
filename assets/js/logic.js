@@ -9,6 +9,8 @@ var timerTextSection = document.getElementById("time");
 var questionTitle = document.getElementById("question-title");
 var questionChoices = document.getElementById("choices");
 
+var finalScoreTextSection = document.getElementById("final-score");
+
 var timer = undefined;
 var timeLeft = 0;
 var penalty = 0;
@@ -81,6 +83,12 @@ function endGame() {
     timeLeft = 0;
 
     renderTimer();
+
+    hideSection(questionsSection);
+    hideSection(feedbackSection);
+    showSection(endScreenSection);
+
+    finalScoreTextSection.textContent = score;
 }
 
 function shuffle(array) {
