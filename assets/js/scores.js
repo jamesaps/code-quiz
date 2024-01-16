@@ -1,5 +1,12 @@
 var highScores = [];
 var highScoresList = document.getElementById("highscores");
+var clearButton = document.getElementById("clear");
+
+clearButton.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    clearHighScores();
+});
 
 renderHighScores();
 
@@ -26,4 +33,10 @@ function getHighScores() {
     if (highScoresFromLocalStorage !== null) {
         highScores = highScoresFromLocalStorage;
     }
+}
+
+function clearHighScores() {
+    localStorage.setItem("high-scores", JSON.stringify([]));
+
+    renderHighScores();
 }
