@@ -15,6 +15,8 @@ var penalty = 0;
 
 var questionNumber = undefined;
 
+var score = 0;
+
 startButton.addEventListener("click", function () {
     startGame();
 });
@@ -37,6 +39,7 @@ function startGame() {
 
     startTimer();
 
+    score = 0;
     questionNumber = 0;
 
     askQuestion();
@@ -106,8 +109,4 @@ function askQuestion() {
 
         questionChoices.appendChild(button);
     }
-}
-
-function answerQuestion(answer) {
-
 }
