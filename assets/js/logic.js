@@ -18,6 +18,7 @@ var timeLeft = 0;
 var penalty = 0;
 
 var feedbackTimeout = undefined;
+var incorrectAnswerTimeout = undefined;
 
 var questionNumber = undefined;
 
@@ -92,14 +93,14 @@ function startTimer() {
             penalty = 0;
         }
 
-        timeLeft = Math.max(timeLeft - 1, 0);
+        timeLeft = Math.max(timeLeft - 0.1, 0);
 
         if (timeLeft === 0) {
             endGame();
         }
 
         renderTimer()
-    }, 1000);
+    }, 100);
 }
 
 function endGame() {
@@ -158,6 +159,13 @@ function answerQuestion(answer) {
     } else {
         ++penalty;
         giveFeedback(`Wrong! Correct answer was ${correctAnswer}.`);
+        timerTextSection.style.color = 'red';
+
+        clearTimeout(incorrectAnswerTimeout);
+
+        incorrectAnswerTimeout = setTimeout(function () {
+            timerTextSection.style.removeProperty('color');
+        }, 300);
     }
 
     nextQuestion();
@@ -174,7 +182,7 @@ function nextQuestion() {
 }
 
 function renderTimer() {
-    timerTextSection.textContent = timeLeft;
+    timerTextSection.textContent = Math.ceil(timeLeft);
 }
 
 function giveFeedback(message) {
