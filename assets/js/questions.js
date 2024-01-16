@@ -1,612 +1,502 @@
 var questions = [
   {
-    "question": "Who sang the title song for the latest Bond film, No Time to Die?",
-    "options": ["Adele", "Sam Smith", "Billie Eilish"],
-    "answer": "Billie Eilish"
+    "question": "What is the purpose of the 'if' statement in programming?",
+    "options": ["To declare a variable", "To define a function", "To make decisions based on a condition"],
+    "answer": "To make decisions based on a condition"
   },
   {
-    "question": "Which flies a green, white, and orange (in that order) tricolor flag?",
-    "options": ["Ireland", "Ivory Coast", "Italy"],
-    "answer": "Ireland"
+    "question": "Which keyword is used to declare a constant variable in JavaScript?",
+    "options": ["var", "let", "const"],
+    "answer": "const"
   },
   {
-    "question": "What company makes the Xperia model of smartphone?",
-    "options": ["Samsung", "Sony", "Nokia"],
-    "answer": "Sony"
+    "question": "What is the role of the 'for' loop in coding?",
+    "options": ["Declaring functions", "Iterating over a sequence of values", "Handling errors"],
+    "answer": "Iterating over a sequence of values"
   },
   {
-    "question": "Which city is home to the Brandenburg Gate?",
-    "options": ["Vienna", "Zurich", "Berlin"],
-    "answer": "Berlin"
+    "question": "In JavaScript, what does the '=== operator' check for?",
+    "options": ["Equality with type conversion", "Strict equality without type conversion", "Inequality"],
+    "answer": "Strict equality without type conversion"
   },
   {
-    "question": "Which of the following is NOT a fruit?",
-    "options": ["Rhubarb", "Tomatoes", "Avocados"],
-    "answer": "Rhubarb"
+    "question": "What does the term 'DRY' stand for in coding principles?",
+    "options": ["Don't Repeat Yourself", "Do Render Yourself", "Do Retry Yourself"],
+    "answer": "Don't Repeat Yourself"
   },
   {
-    "question": "Where was the first example of paper money used?",
-    "options": ["China", "Turkey", "Greece"],
-    "answer": "China"
+    "question": "Which data type is used for representing true/false values in JavaScript?",
+    "options": ["String", "Boolean", "Number"],
+    "answer": "Boolean"
   },
   {
-    "question": "Who is generally considered the inventor of the motor car?",
-    "options": ["Henry Ford", "Karl Benz", "Henry M. Leland"],
-    "answer": "Karl Benz"
+    "question": "What does the acronym 'API' stand for in programming?",
+    "options": ["Application Programming Interface", "Advanced Programming Interface", "Application Process Interface"],
+    "answer": "Application Programming Interface"
   },
   {
-    "question": "If you were looking at Iguazu Falls, on what continent would you be?",
-    "options": ["Asia", "Africa", "South America"],
-    "answer": "South America"
+    "question": "What is the purpose of the 'return' statement in a function?",
+    "options": ["To print values to the console", "To end the function execution", "To return a value from the function"],
+    "answer": "To return a value from the function"
   },
   {
-    "question": "What number was the Apollo mission that successfully put a man on the moon for the first time in human history?",
-    "options": ["Apollo 11", "Apollo 12", "Apollo 13"],
-    "answer": "Apollo 11"
+    "question": "Which built-in function is used to convert a string to an integer in JavaScript?",
+    "options": ["parseInt()", "parseFloat()", "toInteger()"],
+    "answer": "parseInt()"
   },
   {
-    "question": "Which of the following languages has the longest alphabet?",
-    "options": ["Greek", "Russian", "Arabic"],
-    "answer": "Russian"
+    "question": "What does 'CSS' stand for in web development?",
+    "options": ["Counter Style Sheet", "Cascading Style Sheet", "Computer Style Sheet"],
+    "answer": "Cascading Style Sheet"
   },
   {
-    "question": "Who was the lead singer of the band The Who?",
-    "options": ["Roger Daltrey", "Don Henley", "Robert Plant"],
-    "answer": "Roger Daltrey"
+    "question": "What does the acronym 'HTML' stand for?",
+    "options": ["Hypertext Markup Language", "Hyperlink and Text Markup Language", "High-Level Text Modeling Language"],
+    "answer": "Hypertext Markup Language"
   },
   {
-    "question": "What spirit is used in making a Tom Collins?",
-    "options": ["Vodka", "Rum", "Gin"],
-    "answer": "Gin"
+    "question": "Which symbol is commonly used for a single-line comment in JavaScript?",
+    "options": ["//", "/*", "#"],
+    "answer": "//"
   },
   {
-    "question": "The fear of insects is known as what?",
-    "options": ["Entomophobia", "Arachnophobia", "Ailurophobia"],
-    "answer": "Entomophobia"
+    "question": "In programming, what is a 'variable'?",
+    "options": ["A reserved keyword", "A container for storing data", "A conditional statement"],
+    "answer": "A container for storing data"
   },
   {
-    "question": "What was the name of the Franco-British supersonic commercial plane that operated from 1976-2003?",
-    "options": ["Accord", "Concorde", "Mirage"],
-    "answer": "Concorde"
+    "question": "What is the purpose of the 'else' statement in an 'if-else' construct?",
+    "options": ["To start a new block of code", "To handle errors", "To define an alternative code block"],
+    "answer": "To define an alternative code block"
   },
   {
-    "question": "Which horoscope sign is a fish?",
-    "options": ["Aquarius", "Cancer", "Pisces"],
-    "answer": "Pisces"
+    "question": "In JavaScript, what is the role of the 'console.log()' function?",
+    "options": ["Prints content to the console", "Declares a variable", "Defines a function"],
+    "answer": "Prints content to the console"
   },
   {
-    "question": "What is the largest US state (by landmass)?",
-    "options": ["Texas", "Alaska", "California"],
-    "answer": "Alaska"
+    "question": "Which operator is used for assigning a value to a variable in JavaScript?",
+    "options": ["==", "=", ":"],
+    "answer": "="
   },
   {
-    "question": "Which app has the most total users?",
-    "options": ["TikTok", "Snapchat", "Instagram"],
-    "answer": "Instagram"
+    "question": "What does the term 'algorithm' refer to in programming?",
+    "options": ["A type of data structure", "A step-by-step procedure for solving a problem", "A form of encryption"],
+    "answer": "A step-by-step procedure for solving a problem"
   },
   {
-    "question": "Which Game of Thrones character is known as the Young Wolf?",
-    "options": ["Robb Stark", "Arya Stark", "Sansa Stark"],
-    "answer": "Robb Stark"
+    "question": "Which programming paradigm does JavaScript primarily follow?",
+    "options": ["Functional programming", "Procedural programming", "Object-oriented programming"],
+    "answer": "Object-oriented programming"
   },
   {
-    "question": "What city hosted the 2002 Olympic Games?",
-    "options": ["Tokyo", "Beijing", "Sydney"],
-    "answer": "Sydney"
+    "question": "What is the purpose of the 'this' keyword in JavaScript?",
+    "options": ["Refers to the current HTML document", "Refers to the global object", "Refers to the current object"],
+    "answer": "Refers to the current object"
   },
   {
-    "question": "How many plays do people (generally) believe that Shakespeare wrote?",
-    "options": ["27", "37", "47"],
-    "answer": "37"
+    "question": "In web development, what is the role of 'CSS'?",
+    "options": ["Handling server-side logic", "Defining the structure of a webpage", "Styling the appearance of a webpage"],
+    "answer": "Styling the appearance of a webpage"
   },
   {
-    "question": "Which of the following was considered one of the Seven Ancient Wonders?",
-    "options": ["Colosseum", "Great Wall of China", "Colossus of Rhodes"],
-    "answer": "Colossus of Rhodes"
+    "question": "What is the function of the 'document.getElementById()' method in JavaScript?",
+    "options": ["Retrieves an element by its class name", "Retrieves an element by its tag name", "Retrieves an element by its ID"],
+    "answer": "Retrieves an element by its ID"
   },
   {
-    "question": "Who directed the Academy Award-winning movie, Gladiator?",
-    "options": ["Ridley Scott", "James Cameron", "Steven Soderbergh"],
-    "answer": "Ridley Scott"
+    "question": "What does the term 'API' stand for in web development?",
+    "options": ["Application Programming Interface", "Advanced Programming Interface", "Application Process Interface"],
+    "answer": "Application Programming Interface"
   },
   {
-    "question": "How long did dinosaurs live on the earth?",
-    "options": ["100-150 million years", "150-200 million years", "200+ million years"],
-    "answer": "150-200 million years"
+    "question": "In JavaScript, what is the purpose of the 'NaN' value?",
+    "options": ["Represents 'Not a Number'", "Indicates 'Null' value", "Marks the end of an array"],
+    "answer": "Represents 'Not a Number'"
   },
   {
-    "question": "What Italian city is famous for its system of canals?",
-    "options": ["Rome", "Naples", "Venice"],
-    "answer": "Venice"
+    "question": "Which function is used to generate a random number in JavaScript?",
+    "options": ["Math.random()", "generateRandom()", "rand()"],
+    "answer": "Math.random()"
   },
   {
-    "question": "What is the strongest muscle in the human body?",
-    "options": ["Jaw", "Heart", "Glutes"],
-    "answer": "Jaw"
+    "question": "What is the significance of the 'async' keyword in JavaScript?",
+    "options": ["Defines a variable as asynchronous", "Declares a function as asynchronous", "Specifies an asynchronous event"],
+    "answer": "Declares a function as asynchronous"
   },
   {
-    "question": "What is the longest-running Broadway show ever?",
-    "options": ["Les Miserable", "The Lion King", "The Phantom of the Opera"],
-    "answer": "The Phantom of the Opera"
+    "question": "Which statement is used for breaking out of a loop in JavaScript?",
+    "options": ["stop", "exit", "break"],
+    "answer": "break"
   },
   {
-    "question": "Where was tea invented?",
-    "options": ["England", "USA", "China"],
-    "answer": "China"
+    "question": "What is the purpose of the 'fetch()' function in JavaScript?",
+    "options": ["To fetch HTML content", "To fetch external resources asynchronously", "To fetch data from a local file"],
+    "answer": "To fetch external resources asynchronously"
   },
   {
-    "question": "Where was the earliest documented case of the Spanish flu?",
-    "options": ["USA", "Spain", "Mexico"],
-    "answer": "USA"
+    "question": "In JavaScript, what is a 'callback function'?",
+    "options": ["A function that is called after a delay", "A function passed as an argument to another function", "A function that returns another function"],
+    "answer": "A function passed as an argument to another function"
   },
   {
-    "question": "What is the capital city of Australia?",
-    "options": ["Sydney", "Melbourne", "Canberra"],
-    "answer": "Canberra"
+    "question": "Which method is used to add an element to the end of an array in JavaScript?",
+    "options": ["push()", "append()", "insert()"],
+    "answer": "push()"
   },
   {
-    "question": "Which planet is known as the Red Planet?",
-    "options": ["Earth", "Mars", "Venus"],
-    "answer": "Mars"
+    "question": "What is the purpose of the 'localStorage' object in web development?",
+    "options": ["Storing data that persists across sessions", "Storing temporary data", "Handling user authentication"],
+    "answer": "Storing data that persists across sessions"
   },
   {
-    "question": "In which year did the Titanic sink?",
-    "options": ["1912", "1907", "1920"],
-    "answer": "1912"
+    "question": "What is the purpose of the 'typeof' operator in JavaScript?",
+    "options": ["To check if a variable is defined", "To identify the type of a variable", "To create a new variable"],
+    "answer": "To identify the type of a variable"
   },
   {
-    "question": "Who wrote the play 'Romeo and Juliet'?",
-    "options": ["William Shakespeare", "Charles Dickens", "Jane Austen"],
-    "answer": "William Shakespeare"
+    "question": "What does the term 'JSON' stand for in web development?",
+    "options": ["JavaScript Object Notation", "JavaScript Oriented Networking", "JavaScript Ordered Notation"],
+    "answer": "JavaScript Object Notation"
   },
   {
-    "question": "Which country is known as the Land of the Rising Sun?",
-    "options": ["China", "Japan", "South Korea"],
-    "answer": "Japan"
+    "question": "In JavaScript, what is the difference between 'undefined' and 'null'?",
+    "options": ["They are interchangeable", "'undefined' is an object, 'null' is a primitive value", "'undefined' represents the absence of a value, 'null' is an intentional absence of any object value"],
+    "answer": "'undefined' represents the absence of a value, 'null' is an intentional absence of any object value"
   },
   {
-    "question": "What is the largest mammal on Earth?",
-    "options": ["Elephant", "Blue Whale", "Giraffe"],
-    "answer": "Blue Whale"
+    "question": "What is the purpose of the 'addEventListener()' method in JavaScript?",
+    "options": ["To create a new HTML element", "To attach an event handler to an element", "To define a new CSS style"],
+    "answer": "To attach an event handler to an element"
   },
   {
-    "question": "Which element has the chemical symbol 'H'?",
-    "options": ["Helium", "Hydrogen", "Hassium"],
-    "answer": "Hydrogen"
+    "question": "Which keyword is used to create an instance of an object in JavaScript?",
+    "options": ["instanceof", "new", "create"],
+    "answer": "new"
   },
   {
-    "question": "What is the currency of Brazil?",
-    "options": ["Peso", "Euro", "Real"],
-    "answer": "Real"
+    "question": "What is 'hoisting' in JavaScript?",
+    "options": ["A feature that allows you to lift objects", "A behavior where variable and function declarations are moved to the top of their containing scope during the compilation phase", "A method of optimizing code execution"],
+    "answer": "A behavior where variable and function declarations are moved to the top of their containing scope during the compilation phase"
   },
   {
-    "question": "Who wrote the novel 'To Kill a Mockingbird'?",
-    "options": ["Harper Lee", "J.K. Rowling", "George Orwell"],
-    "answer": "Harper Lee"
+    "question": "What is the purpose of the 'Array.map()' method in JavaScript?",
+    "options": ["To create a new array with the results of calling a provided function on every element", "To concatenate two arrays", "To filter elements from an array"],
+    "answer": "To create a new array with the results of calling a provided function on every element"
   },
   {
-    "question": "In which year did World War II end?",
-    "options": ["1945", "1939", "1950"],
-    "answer": "1945"
+    "question": "In JavaScript, what does the 'let' keyword indicate?",
+    "options": ["A constant variable", "A variable with block scope", "A variable with function scope"],
+    "answer": "A variable with block scope"
   },
   {
-    "question": "What is the capital city of Australia?",
-    "options": ["Sydney", "Melbourne", "Canberra"],
-    "answer": "Canberra"
+    "question": "What is the purpose of the 'try...catch' statement in JavaScript?",
+    "options": ["To declare a new function", "To handle asynchronous code", "To catch and handle exceptions in code"],
+    "answer": "To catch and handle exceptions in code"
   },
   {
-    "question": "Which planet is known as the Red Planet?",
-    "options": ["Earth", "Mars", "Venus"],
-    "answer": "Mars"
+    "question": "Which method is used to remove the last element from an array in JavaScript?",
+    "options": ["removeLast()", "pop()", "deleteLast()"],
+    "answer": "pop()"
   },
   {
-    "question": "In which year did the Titanic sink?",
-    "options": ["1912", "1907", "1920"],
-    "answer": "1912"
+    "question": "What is the purpose of the 'setTimeout()' function in JavaScript?",
+    "options": ["To set the system time", "To delay the execution of a function", "To set the interval for repeated execution"],
+    "answer": "To delay the execution of a function"
   },
   {
-    "question": "Who wrote the play 'Romeo and Juliet'?",
-    "options": ["William Shakespeare", "Charles Dickens", "Jane Austen"],
-    "answer": "William Shakespeare"
+    "question": "In JavaScript, what is a 'closure'?",
+    "options": ["A way to close the browser window", "A function that closes another function", "A function that has access to variables from its outer (enclosing) scope"],
+    "answer": "A function that has access to variables from its outer (enclosing) scope"
   },
   {
-    "question": "Which country is known as the Land of the Rising Sun?",
-    "options": ["China", "Japan", "South Korea"],
-    "answer": "Japan"
+    "question": "What does the term 'scope' refer to in programming?",
+    "options": ["The geographical location of code", "The visibility of variables in a specific part of code", "The speed of code execution"],
+    "answer": "The visibility of variables in a specific part of code"
   },
   {
-    "question": "What is the largest mammal on Earth?",
-    "options": ["Elephant", "Blue Whale", "Giraffe"],
-    "answer": "Blue Whale"
+    "question": "In JavaScript, what is an 'arrow function'?",
+    "options": ["A function with a syntax error", "A function that uses the '=> ' notation", "A function that always returns 'true'"],
+    "answer": "A function that uses the '=> ' notation"
   },
   {
-    "question": "Which element has the chemical symbol 'H'?",
-    "options": ["Helium", "Hydrogen", "Hassium"],
-    "answer": "Hydrogen"
+    "question": "What is the purpose of the 'Object.keys()' method in JavaScript?",
+    "options": ["To create a new object", "To return an array of a given object's own enumerable property names", "To concatenate two objects"],
+    "answer": "To return an array of a given object's own enumerable property names"
   },
   {
-    "question": "What is the currency of Brazil?",
-    "options": ["Peso", "Euro", "Real"],
-    "answer": "Real"
+    "question": "Which JavaScript method is used to join elements of an array into a string?",
+    "options": ["concat()", "combine()", "join()"],
+    "answer": "join()"
   },
   {
-    "question": "Who wrote the novel 'To Kill a Mockingbird'?",
-    "options": ["Harper Lee", "J.K. Rowling", "George Orwell"],
-    "answer": "Harper Lee"
+    "question": "What is the role of the 'break' statement in a switch statement?",
+    "options": ["To end the entire switch statement", "To break out of the current loop or switch statement", "To initiate the default case"],
+    "answer": "To break out of the current loop or switch statement"
   },
   {
-    "question": "In which year did World War II end?",
-    "options": ["1945", "1939", "1950"],
-    "answer": "1945"
+    "question": "In JavaScript, what does the 'const' keyword signify when declaring a variable?",
+    "options": ["A variable that cannot be reassigned", "A variable that can be reassigned", "A constant variable"],
+    "answer": "A variable that cannot be reassigned"
   },
   {
-    "question": "What is the capital city of Australia?",
-    "options": ["Sydney", "Melbourne", "Canberra"],
-    "answer": "Canberra"
+    "question": "What is the purpose of the 'Array.filter()' method in JavaScript?",
+    "options": ["To remove elements from an array", "To create a new array with elements that pass a test", "To sort elements in an array"],
+    "answer": "To create a new array with elements that pass a test"
   },
   {
-    "question": "Which planet is known as the Red Planet?",
-    "options": ["Earth", "Mars", "Venus"],
-    "answer": "Mars"
+    "question": "In JavaScript, what is 'strict mode'?",
+    "options": ["A mode that enforces stricter syntax rules", "A mode that allows for lax coding practices", "A mode specific to asynchronous programming"],
+    "answer": "A mode that enforces stricter syntax rules"
   },
   {
-    "question": "In which year did the Titanic sink?",
-    "options": ["1912", "1907", "1920"],
-    "answer": "1912"
+    "question": "What is the purpose of the 'Array.reduce()' method in JavaScript?",
+    "options": ["To remove elements from an array", "To create a new array with elements that pass a test", "To reduce an array to a single value"],
+    "answer": "To reduce an array to a single value"
   },
   {
-    "question": "Who wrote the play 'Romeo and Juliet'?",
-    "options": ["William Shakespeare", "Charles Dickens", "Jane Austen"],
-    "answer": "William Shakespeare"
+    "question": "In JavaScript, what is the role of the 'spread' operator?",
+    "options": ["To merge two arrays", "To spread elements of an array into a new array", "To create a random array"],
+    "answer": "To spread elements of an array into a new array"
   },
   {
-    "question": "Which country is known as the Land of the Rising Sun?",
-    "options": ["China", "Japan", "South Korea"],
-    "answer": "Japan"
+    "question": "What does the term 'asynchronous' mean in programming?",
+    "options": ["A type of loop", "Code execution that doesn't follow the normal flow", "A method for handling exceptions"],
+    "answer": "Code execution that doesn't follow the normal flow"
   },
   {
-    "question": "What is the largest mammal on Earth?",
-    "options": ["Elephant", "Blue Whale", "Giraffe"],
-    "answer": "Blue Whale"
+    "question": "What is the purpose of the 'localStorage' object in JavaScript?",
+    "options": ["Storing data that persists across sessions", "Storing temporary data", "Handling user authentication"],
+    "answer": "Storing data that persists across sessions"
   },
   {
-    "question": "Which element has the chemical symbol 'H'?",
-    "options": ["Helium", "Hydrogen", "Hassium"],
-    "answer": "Hydrogen"
+    "question": "In JavaScript, what is a 'closure'?",
+    "options": ["A way to close the browser window", "A function that closes another function", "A function that has access to variables from its outer (enclosing) scope"],
+    "answer": "A function that has access to variables from its outer (enclosing) scope"
   },
   {
-    "question": "What is the currency of Brazil?",
-    "options": ["Peso", "Euro", "Real"],
-    "answer": "Real"
+    "question": "What is the purpose of the 'JSON.stringify()' method in JavaScript?",
+    "options": ["To parse JSON data", "To convert a JavaScript object to a JSON string", "To extract values from a JSON string"],
+    "answer": "To convert a JavaScript object to a JSON string"
   },
   {
-    "question": "Who wrote the novel 'To Kill a Mockingbird'?",
-    "options": ["Harper Lee", "J.K. Rowling", "George Orwell"],
-    "answer": "Harper Lee"
+    "question": "In JavaScript, what is 'Promises' used for?",
+    "options": ["To handle asynchronous operations", "To define constant variables", "To create conditional statements"],
+    "answer": "To handle asynchronous operations"
   },
   {
-    "question": "In which year did World War II end?",
-    "options": ["1945", "1939", "1950"],
-    "answer": "1945"
+    "question": "What is 'callback hell' in JavaScript?",
+    "options": ["A term for overusing callback functions", "A situation where callback functions are nested deeply", "A type of loop structure"],
+    "answer": "A situation where callback functions are nested deeply"
   },
   {
-    "question": "What is the largest ocean on Earth?",
-    "options": ["Atlantic", "Indian", "Pacific"],
-    "answer": "Pacific"
+    "question": "In JavaScript, what is an 'IIFE'?",
+    "options": ["Immediately Invoked Function Expression", "Internal Inline Function Element", "Inline If-Else"],
+    "answer": "Immediately Invoked Function Expression"
   },
   {
-    "question": "Which element has the chemical symbol 'O'?",
-    "options": ["Oxygen", "Osmium", "Ozone"],
-    "answer": "Oxygen"
+    "question": "What is the purpose of the 'Map' data structure in JavaScript?",
+    "options": ["To store values in a key-value pair", "To create a sequence of values", "To filter elements from an array"],
+    "answer": "To store values in a key-value pair"
   },
   {
-    "question": "Who painted the Mona Lisa?",
-    "options": ["Vincent van Gogh", "Leonardo da Vinci", "Pablo Picasso"],
-    "answer": "Leonardo da Vinci"
+    "question": "What is the role of the 'super' keyword in JavaScript?",
+    "options": ["To reference the parent class in a subclass", "To execute a function immediately", "To declare a superclass"],
+    "answer": "To reference the parent class in a subclass"
   },
   {
-    "question": "What is the main ingredient in guacamole?",
-    "options": ["Tomato", "Avocado", "Onion"],
-    "answer": "Avocado"
+    "question": "How is a JavaScript 'constructor' function different from a regular function?",
+    "options": ["It cannot be invoked with the 'new' keyword", "It is used for mathematical calculations", "It is used to create and initialize objects with the 'new' keyword"],
+    "answer": "It is used to create and initialize objects with the 'new' keyword"
   },
   {
-    "question": "In which continent is the Sahara Desert located?",
-    "options": ["Asia", "Africa", "South America"],
-    "answer": "Africa"
+    "question": "What is the purpose of the 'Array.slice()' method in JavaScript?",
+    "options": ["To remove elements from an array", "To extract a portion of an array into a new array", "To sort elements in an array"],
+    "answer": "To extract a portion of an array into a new array"
   },
   {
-    "question": "What is the capital city of Japan?",
-    "options": ["Tokyo", "Seoul", "Beijing"],
-    "answer": "Tokyo"
+    "question": "In JavaScript, what is the 'event loop'?",
+    "options": ["A loop for handling network events", "A mechanism for handling asynchronous operations", "A type of loop used in animations"],
+    "answer": "A mechanism for handling asynchronous operations"
   },
   {
-    "question": "Which planet is known as the 'Jewel of the Solar System'?",
-    "options": ["Saturn", "Neptune", "Uranus"],
-    "answer": "Saturn"
+    "question": "What is the purpose of the 'debounce' function in JavaScript?",
+    "options": ["To add a delay before executing a function", "To remove duplicates from an array", "To sort elements in an array"],
+    "answer": "To add a delay before executing a function"
   },
   {
-    "question": "Who wrote 'The Great Gatsby'?",
-    "options": ["F. Scott Fitzgerald", "Ernest Hemingway", "Mark Twain"],
-    "answer": "F. Scott Fitzgerald"
+    "question": "In JavaScript, what is 'ECMAScript'?",
+    "options": ["A programming language", "A scripting language specification", "An integrated development environment"],
+    "answer": "A scripting language specification"
   },
   {
-    "question": "What is the world's largest island?",
-    "options": ["Greenland", "Australia", "Borneo"],
-    "answer": "Greenland"
+    "question": "What does the term 'polyfill' mean in the context of JavaScript?",
+    "options": ["A new feature in the JavaScript language", "A function that fills arrays with random values", "A piece of code that provides modern functionality in older browsers"],
+    "answer": "A piece of code that provides modern functionality in older browsers"
   },
   {
-    "question": "Which famous scientist developed the theory of general relativity?",
-    "options": ["Isaac Newton", "Albert Einstein", "Stephen Hawking"],
-    "answer": "Albert Einstein"
+    "question": "What is the purpose of the 'Array.forEach()' method in JavaScript?",
+    "options": ["To create a new array", "To iterate over elements of an array and perform a callback function", "To filter elements from an array"],
+    "answer": "To iterate over elements of an array and perform a callback function"
   },
   {
-    "question": "What is the currency of China?",
-    "options": ["Yen", "Won", "Yuan"],
-    "answer": "Yuan"
+    "question": "In JavaScript, what is the purpose of the 'async/await' syntax?",
+    "options": ["To handle synchronous code", "To handle asynchronous code in a more synchronous style", "To create conditional statements"],
+    "answer": "To handle asynchronous code in a more synchronous style"
   },
   {
-    "question": "Which gas is most abundant in the Earth's atmosphere?",
-    "options": ["Oxygen", "Nitrogen", "Carbon Dioxide"],
-    "answer": "Nitrogen"
+    "question": "What is the purpose of the 'Array.indexOf()' method in JavaScript?",
+    "options": ["To find the index of a specified element in an array", "To remove elements from an array", "To add elements to the beginning of an array"],
+    "answer": "To find the index of a specified element in an array"
   },
   {
-    "question": "Who is known as the 'Father of Computer Science'?",
-    "options": ["Alan Turing", "Bill Gates", "Steve Jobs"],
-    "answer": "Alan Turing"
+    "question": "In JavaScript, what is a 'generator function'?",
+    "options": ["A function that generates random numbers", "A function with a 'yield' keyword, allowing pausing and resuming of execution", "A function that creates instances of objects"],
+    "answer": "A function with a 'yield' keyword, allowing pausing and resuming of execution"
   },
   {
-    "question": "What is the largest bird in the world?",
-    "options": ["Ostrich", "Emu", "Albatross"],
-    "answer": "Ostrich"
+    "question": "What is the purpose of the 'RESTful API' in web development?",
+    "options": ["To style web pages", "To handle asynchronous operations", "To provide a standardized way for different systems to communicate over HTTP"],
+    "answer": "To provide a standardized way for different systems to communicate over HTTP"
   },
   {
-    "question": "In which year did the Berlin Wall fall, leading to the reunification of Germany?",
-    "options": ["1989", "1991", "1995"],
-    "answer": "1989"
+    "question": "In JavaScript, what is the role of the 'Object.assign()' method?",
+    "options": ["To create a new object", "To assign values to an existing object", "To check if an object has a specific property"],
+    "answer": "To assign values to an existing object"
   },
   {
-    "question": "What is the largest planet in our solar system?",
-    "options": ["Mars", "Jupiter", "Saturn"],
-    "answer": "Jupiter"
+    "question": "What does the term 'Babel' refer to in the context of JavaScript?",
+    "options": ["A popular JavaScript framework", "A compiler for converting ECMAScript 2015+ code into a backward-compatible version", "A built-in JavaScript function"],
+    "answer": "A compiler for converting ECMAScript 2015+ code into a backward-compatible version"
   },
   {
-    "question": "Who wrote '1984'?",
-    "options": ["George Orwell", "Aldous Huxley", "Ray Bradbury"],
-    "answer": "George Orwell"
+    "question": "In JavaScript, what is the purpose of the 'Array.pop()' method?",
+    "options": ["To remove the last element from an array", "To add an element to the end of an array", "To create a new array"],
+    "answer": "To remove the last element from an array"
   },
   {
-    "question": "Which country is known as the 'Land of the Midnight Sun'?",
-    "options": ["Norway", "Canada", "Sweden"],
-    "answer": "Norway"
+    "question": "What is the purpose of the 'window' object in a browser environment?",
+    "options": ["To define functions", "To reference the browser window", "To create a new HTML element"],
+    "answer": "To reference the browser window"
   },
   {
-    "question": "What is the smallest prime number?",
-    "options": ["0", "1", "2"],
-    "answer": "2"
+    "question": "In JavaScript, what is the role of the 'NaN' value?",
+    "options": ["Represents 'Not a Number'", "Indicates 'Null' value", "Marks the end of an array"],
+    "answer": "Represents 'Not a Number'"
   },
   {
-    "question": "In which year did the United States declare its independence?",
-    "options": ["1776", "1789", "1800"],
-    "answer": "1776"
+    "question": "What is the significance of the 'async' keyword in JavaScript?",
+    "options": ["Defines a variable as asynchronous", "Declares a function as asynchronous", "Specifies an asynchronous event"],
+    "answer": "Declares a function as asynchronous"
   },
   {
-    "question": "What is the currency of India?",
-    "options": ["Rupee", "Rupiah", "Ringgit"],
-    "answer": "Rupee"
+    "question": "In web development, what is the purpose of the 'XMLHttpRequest' object?",
+    "options": ["To handle exceptions", "To send HTTP requests from a web page", "To store data persistently"],
+    "answer": "To send HTTP requests from a web page"
   },
   {
-    "question": "Which element has the chemical symbol 'C'?",
-    "options": ["Calcium", "Carbon", "Chlorine"],
-    "answer": "Carbon"
+    "question": "What is the purpose of the 'arguments' object in JavaScript?",
+    "options": ["To store arguments passed to a function", "To declare global variables", "To create an array-like object"],
+    "answer": "To store arguments passed to a function"
   },
   {
-    "question": "Who painted 'Starry Night'?",
-    "options": ["Claude Monet", "Vincent van Gogh", "Pablo Picasso"],
-    "answer": "Vincent van Gogh"
+    "question": "In JavaScript, what is 'prototypal inheritance'?",
+    "options": ["A method for creating private variables", "A way of building objects based on existing objects", "A technique for asynchronous programming"],
+    "answer": "A way of building objects based on existing objects"
   },
   {
-    "question": "What is the capital city of Canada?",
-    "options": ["Ottawa", "Toronto", "Vancouver"],
-    "answer": "Ottawa"
+    "question": "What is the purpose of the 'encodeURIComponent()' function in JavaScript?",
+    "options": ["To decode a URI component", "To encode a URI component", "To convert a string to a number"],
+    "answer": "To encode a URI component"
   },
   {
-    "question": "In which country did the Renaissance originate?",
-    "options": ["Italy", "France", "England"],
-    "answer": "Italy"
+    "question": "In JavaScript, what is the 'fetch' API used for?",
+    "options": ["To fetch HTML content", "To fetch external resources asynchronously", "To fetch data from a local file"],
+    "answer": "To fetch external resources asynchronously"
   },
   {
-    "question": "What is the largest organ in the human body?",
-    "options": ["Heart", "Liver", "Skin"],
-    "answer": "Skin"
+    "question": "What is the role of the 'arguments' object in JavaScript?",
+    "options": ["To store arguments passed to a function", "To declare global variables", "To create an array-like object"],
+    "answer": "To store arguments passed to a function"
   },
   {
-    "question": "Who wrote 'Pride and Prejudice'?",
-    "options": ["Charlotte Brontë", "Jane Austen", "Emily Brontë"],
-    "answer": "Jane Austen"
+    "question": "In JavaScript, what does the 'typeof' operator return for the boolean data type?",
+    "options": ["Boolean", "Number", "String"],
+    "answer": "Boolean"
   },
   {
-    "question": "What is the capital city of South Africa?",
-    "options": ["Cape Town", "Pretoria", "Johannesburg"],
-    "answer": "Pretoria"
+    "question": "What is the purpose of the 'Array.some()' method in JavaScript?",
+    "options": ["To check if at least one element in an array passes a test", "To create a new array", "To sort elements in an array"],
+    "answer": "To check if at least one element in an array passes a test"
   },
   {
-    "question": "Which river is the longest in the world?",
-    "options": ["Amazon", "Nile", "Yangtze"],
-    "answer": "Nile"
+    "question": "In JavaScript, what is the 'hoisting'?",
+    "options": ["A method for optimizing code execution", "A behavior where variable and function declarations are moved to the top of their containing scope during the compilation phase", "A feature for handling asynchronous code"],
+    "answer": "A behavior where variable and function declarations are moved to the top of their containing scope during the compilation phase"
   },
   {
-    "question": "Who developed the theory of evolution by natural selection?",
-    "options": ["Charles Darwin", "Gregor Mendel", "Alfred Wallace"],
-    "answer": "Charles Darwin"
+    "question": "What is the purpose of the 'indexOf()' method in JavaScript?",
+    "options": ["To find the index of the first occurrence of a specified element in an array", "To create a new index for an array element", "To check if an element exists in an array"],
+    "answer": "To find the index of the first occurrence of a specified element in an array"
   },
   {
-    "question": "What is the capital city of France?",
-    "options": ["Berlin", "Madrid", "Paris"],
-    "answer": "Paris"
+    "question": "In JavaScript, what is the role of the 'bind()' method?",
+    "options": ["To bind two functions together", "To create a new function with a specified 'this' value", "To check if a function is bound"],
+    "answer": "To create a new function with a specified 'this' value"
   },
   {
-    "question": "Which gas do plants absorb from the atmosphere during photosynthesis?",
-    "options": ["Oxygen", "Carbon Dioxide", "Nitrogen"],
-    "answer": "Carbon Dioxide"
+    "question": "What is the purpose of the 'filter()' method in JavaScript?",
+    "options": ["To create a new array with all elements that pass a test implemented by the provided function", "To remove elements from an array", "To sort elements in an array"],
+    "answer": "To create a new array with all elements that pass a test implemented by the provided function"
   },
   {
-    "question": "Who is known as the 'Queen of Pop'?",
-    "options": ["Madonna", "Beyoncé", "Lady Gaga"],
-    "answer": "Madonna"
+    "question": "In JavaScript, what is the role of the 'typeof' operator?",
+    "options": ["To check if a variable is defined", "To identify the type of a variable", "To convert a variable to a different type"],
+    "answer": "To identify the type of a variable"
   },
   {
-    "question": "What is the capital city of Mexico?",
-    "options": ["Madrid", "Buenos Aires", "Mexico City"],
-    "answer": "Mexico City"
+    "question": "What does the acronym 'XHR' stand for in web development?",
+    "options": ["Extensible HyperText Renderer", "XML HTTP Request", "XHTML Hyperlink Redirect"],
+    "answer": "XML HTTP Request"
   },
   {
-    "question": "In which year did the World Wide Web (WWW) become publicly available?",
-    "options": ["1989", "1991", "1993"],
-    "answer": "1993"
+    "question": "In JavaScript, what is the purpose of the 'reduce()' method?",
+    "options": ["To reduce the size of an array", "To concatenate two arrays", "To apply a function against an accumulator and each element in the array to reduce it to a single value"],
+    "answer": "To apply a function against an accumulator and each element in the array to reduce it to a single value"
   },
   {
-    "question": "What is the smallest country in the world?",
-    "options": ["Monaco", "San Marino", "Vatican City"],
-    "answer": "Vatican City"
+    "question": "What is the significance of the 'async/await' keywords in JavaScript?",
+    "options": ["To define asynchronous functions", "To create a new asynchronous event", "To handle synchronous operations"],
+    "answer": "To define asynchronous functions"
   },
   {
-    "question": "Who wrote 'The Odyssey'?",
-    "options": ["Homer", "Virgil", "Ovid"],
-    "answer": "Homer"
+    "question": "In JavaScript, what does the 'Map' object allow you to do?",
+    "options": ["Store key-value pairs", "Create an array of values", "Apply a function to all elements in an array"],
+    "answer": "Store key-value pairs"
   },
   {
-    "question": "Which planet is known as the 'Morning Star' or 'Evening Star'?",
-    "options": ["Venus", "Mars", "Jupiter"],
-    "answer": "Venus"
+    "question": "What is the purpose of the 'event.preventDefault()' method in JavaScript?",
+    "options": ["To stop the propagation of an event", "To prevent the default action associated with an event", "To trigger a default action for an event"],
+    "answer": "To prevent the default action associated with an event"
   },
   {
-    "question": "What is the capital city of Russia?",
-    "options": ["St. Petersburg", "Moscow", "Kiev"],
-    "answer": "Moscow"
+    "question": "Which method is used to convert a string to uppercase in JavaScript?",
+    "options": ["toUpperCase()", "toUppercase()", "upperCase()"],
+    "answer": "toUpperCase()"
   },
   {
-    "question": "Who was the first woman to win a Nobel Prize?",
-    "options": ["Marie Curie", "Rosalind Franklin", "Dorothy Crowfoot Hodgkin"],
-    "answer": "Marie Curie"
+    "question": "What is the role of the 'localStorage' object in JavaScript?",
+    "options": ["Storing data that persists across sessions", "Storing temporary data", "Handling user authentication"],
+    "answer": "Storing data that persists across sessions"
   },
   {
-    "question": "What is the largest flower in the world?",
-    "options": ["Rafflesia", "Sunflower", "Orchid"],
-    "answer": "Rafflesia"
+    "question": "In JavaScript, what is the purpose of the 'splice()' method?",
+    "options": ["To add elements to an array at a specified index", "To remove elements from an array at a specified index", "To concatenate two arrays"],
+    "answer": "To add elements to an array at a specified index"
   },
   {
-    "question": "In which year did the Renaissance end?",
-    "options": ["1600", "1650", "1700"],
-    "answer": "1600"
-  },
-  {
-    "question": "What is the capital city of Brazil?",
-    "options": ["São Paulo", "Brasília", "Rio de Janeiro"],
-    "answer": "Brasília"
-  },
-  {
-    "question": "Which country is known as the 'Land of the Rising Sun'?",
-    "options": ["China", "Japan", "South Korea"],
-    "answer": "Japan"
-  },
-  {
-    "question": "What is the capital city of South Korea?",
-    "options": ["Seoul", "Busan", "Incheon"],
-    "answer": "Seoul"
-  },
-  {
-    "question": "Who wrote 'The Canterbury Tales'?",
-    "options": ["Geoffrey Chaucer", "William Shakespeare", "John Milton"],
-    "answer": "Geoffrey Chaucer"
-  },
-  {
-    "question": "What is the capital city of Spain?",
-    "options": ["Barcelona", "Madrid", "Valencia"],
-    "answer": "Madrid"
-  },
-  {
-    "question": "Which ocean is the largest?",
-    "options": ["Atlantic", "Indian", "Pacific"],
-    "answer": "Pacific"
-  },
-  {
-    "question": "What is the currency of Japan?",
-    "options": ["Yen", "Won", "Yuan"],
-    "answer": "Yen"
-  },
-  {
-    "question": "Who wrote 'The Catcher in the Rye'?",
-    "options": ["J.D. Salinger", "F. Scott Fitzgerald", "Ernest Hemingway"],
-    "answer": "J.D. Salinger"
-  },
-  {
-    "question": "What is the capital city of Argentina?",
-    "options": ["Buenos Aires", "Cordoba", "Rosario"],
-    "answer": "Buenos Aires"
-  },
-  {
-    "question": "In which year did World War I begin?",
-    "options": ["1914", "1916", "1918"],
-    "answer": "1914"
-  },
-  {
-    "question": "Who was the first President of the United States?",
-    "options": ["Thomas Jefferson", "John Adams", "George Washington"],
-    "answer": "George Washington"
-  },
-  {
-    "question": "What is the capital city of Turkey?",
-    "options": ["Istanbul", "Ankara", "Izmir"],
-    "answer": "Ankara"
-  },
-  {
-    "question": "Who discovered penicillin?",
-    "options": ["Alexander Fleming", "Louis Pasteur", "Joseph Lister"],
-    "answer": "Alexander Fleming"
-  },
-  {
-    "question": "What is the world's largest desert?",
-    "options": ["Sahara", "Gobi", "Antarctica"],
-    "answer": "Antarctica"
-  },
-  {
-    "question": "Which country is known as the 'Land of the Free'?",
-    "options": ["Canada", "United States", "Australia"],
-    "answer": "United States"
-  },
-  {
-    "question": "What is the capital city of Egypt?",
-    "options": ["Cairo", "Alexandria", "Giza"],
-    "answer": "Cairo"
-  },
-  {
-    "question": "Who wrote 'The Iliad'?",
-    "options": ["Virgil", "Homer", "Ovid"],
-    "answer": "Homer"
-  },
-  {
-    "question": "What is the capital city of Saudi Arabia?",
-    "options": ["Dubai", "Riyadh", "Jeddah"],
-    "answer": "Riyadh"
-  },
-  {
-    "question": "Who was the first man to step on the moon?",
-    "options": ["Neil Armstrong", "Buzz Aldrin", "Michael Collins"],
-    "answer": "Neil Armstrong"
-  },
-  {
-    "question": "What is the capital city of Thailand?",
-    "options": ["Bangkok", "Phuket", "Chiang Mai"],
-    "answer": "Bangkok"
-  },
-  {
-    "question": "Who painted 'The Persistence of Memory'?",
-    "options": ["Pablo Picasso", "Salvador Dalí", "Claude Monet"],
-    "answer": "Salvador Dalí"
-  },
-  {
-    "question": "What is the currency of the United Kingdom?",
-    "options": ["Euro", "Pound Sterling", "Dollar"],
-    "answer": "Pound Sterling"
+    "question": "What does the term 'AJAX' stand for in web development?",
+    "options": ["Asynchronous JavaScript and XML", "Advanced JavaScript and XML", "Automated JavaScript and XML"],
+    "answer": "Asynchronous JavaScript and XML"
   }
 ]
