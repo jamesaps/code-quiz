@@ -143,10 +143,10 @@ function answerQuestion(answer) {
 
     if (answer === correctAnswer) {
         ++score;
-        giveFeedback(true, null);
+        giveFeedback("Correct");
     } else {
         ++penalty;
-        giveFeedback(false, `Correct answer was ${answer}.`)
+        giveFeedback(`Wrong! Correct answer was ${answer}.`);
     }
 
     nextQuestion();
@@ -166,19 +166,7 @@ function renderTimer() {
     timerTextSection.textContent = timeLeft;
 }
 
-function giveFeedback(correct, notes) {
-    var message = "";
-
-    if (correct) {
-        message = "Correct!"
-    } else {
-        message = "Wrong!"
-    }
-
-    if (notes !== null) {
-        message += " " + notes;
-    }
-
+function giveFeedback(message) {
     feedbackSection.textContent = message;
     showSection(feedbackSection);
 
