@@ -6,6 +6,9 @@ var feedbackSection = document.getElementById("feedback");
 var startButton = document.getElementById("start");
 var timerTextSection = document.getElementById("time");
 
+var questionTitle = document.getElementById("question-title");
+var questionChoices = document.getElementById("choices");
+
 var timer = undefined;
 var timeLeft = 0;
 var penalty = false;
@@ -25,6 +28,8 @@ function startGame() {
     startTimer();
 
     questionNumber = 0;
+
+    askQuestion();
 }
 
 function hideSection(section) {
@@ -77,3 +82,19 @@ function shuffle(array) {
 
     return array;
 }
+
+function askQuestion() {
+    var question = questions[questionNumber];
+
+    questionTitle.textContent = question.question;
+
+    for (var i = 0; i < question.options.length; ++i) {
+        var button = document.createElement("button");
+
+        button.textContent = `${i + 1}. ${question.options[i]}`;
+        button.setAttribute("data-answer", question.options[i]);
+
+        questionChoices.appendChild(button);
+    }
+}
+
