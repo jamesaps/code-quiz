@@ -104,6 +104,7 @@ function shuffle(array) {
 function askQuestion() {
     var question = questions[questionNumber];
 
+    questionChoices.innerHTML = "";
     questionTitle.textContent = question.question;
 
     for (var i = 0; i < question.options.length; ++i) {
