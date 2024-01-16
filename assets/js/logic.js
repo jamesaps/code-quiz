@@ -9,6 +9,8 @@ var timerTextSection = document.getElementById("time");
 var questionTitle = document.getElementById("question-title");
 var questionChoices = document.getElementById("choices");
 
+var submitButton = document.getElementById("submit");
+var initialsInputText = document.getElementById("initials");
 var finalScoreTextSection = document.getElementById("final-score");
 
 var timer = undefined;
@@ -34,6 +36,17 @@ questionChoices.addEventListener("click", function (event) {
         answerQuestion(answer);
     }
 });
+
+submitButton.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    var initials = initialsInputText.value;
+
+    if (initials.length === 0 || initials.length > 3) {
+        alert("Initials must be between 1-3 characters long.");
+        return;
+    }
+})
 
 function startGame() {
     hideSection(startScreenSection);
