@@ -13,6 +13,9 @@ var submitButton = document.getElementById("submit");
 var initialsInputText = document.getElementById("initials");
 var finalScoreTextSection = document.getElementById("final-score");
 
+var correctAnswerAudio = new Audio('./assets/sfx/correct.wav');
+var incorrectAnswerAudio = new Audio('./assets/sfx/incorrect.wav');
+
 var timer = undefined;
 var timeLeft = 0;
 var penalty = 0;
@@ -156,9 +159,12 @@ function answerQuestion(answer) {
     if (answer === correctAnswer) {
         ++score;
         giveFeedback("Correct");
+        correctAnswerAudio.play();
     } else {
         ++penalty;
         giveFeedback(`Wrong! Correct answer was ${correctAnswer}.`);
+        incorrectAnswerAudio.play();
+
         timerTextSection.style.color = 'red';
 
         clearTimeout(incorrectAnswerTimeout);
