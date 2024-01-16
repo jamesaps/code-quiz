@@ -82,7 +82,7 @@ function showSection(section) {
 }
 
 function startTimer() {
-    timeLeft = 10;
+    timeLeft = 60;
 
     renderTimer();
 
